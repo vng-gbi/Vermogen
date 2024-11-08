@@ -34,11 +34,11 @@
                      </tr>
                      <tr>
                         <th>Herkomst definitie</th>
-                        <td> </td>
+                        <td>GBI - Werkgroep Ontologie</td>
                      </tr>
                      <tr>
                         <th>Datum opname</th>
-                        <td> </td>
+                        <td>8-2-2018</td>
                      </tr>
                      <tr>
                         <th>Unieke aanduiding</th>
@@ -69,7 +69,8 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Bankrekening_BankrekeningID">Bankrekening ID</a>
                            </td>
-                        <td></td>
+                        <td>Uniek nummer toegekend door het systeem, zodat een bankrekening kan worden geidentificeerd.Bron:
+                           GBI-Werkgroep Ontologie Inkomen</td>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
                            </td>
@@ -79,7 +80,12 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Bankrekening_Bankrekeningnummer">Bankrekeningnummer</a>
                            </td>
-                        <td></td>
+                        <td>Het nummer van een bankrekening, zoals dat door een bankinstelling als identificerend
+                           nummer aan een overeenkomst tussen de bank en één of meer PERSO(O)Nen wordt toegekend.Dit
+                           rekeningnummer kan worden gebruikt in het geval er wel sprake is van bovenstaande
+                           afspraak, maar geen IBAN bekend is. Deze informatiebehoefte bestaat om vermogen op
+                           buitenlandse rekeningen (bijv. Russisch) toe te kunnen voegen als vermogen.Bron: SGR
+                           16.0Norminstantie: NEN-1888:2002 - Bankrekeningnummer</td>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
                            </td>
@@ -89,7 +95,8 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Bankrekening_Brontype">Brontype</a>
                            </td>
-                        <td></td>
+                        <td>De soort bron van de gegevens in deze entiteit (burger, professional of externe bron).Bron:
+                           GBI-Werkgroep Ontologie Inkomen</td>
                         <td>
                            <a class="link" href="#detail_class_Vermogen_Brontype">Brontype</a>
                            </td>
@@ -119,7 +126,8 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Bankrekening_IBAN">IBAN</a>
                            </td>
-                        <td></td>
+                        <td>Het wereldwijde unieke nummer van een bankrekening.Bron: SGR 16.0Norminstantie: ISO
+                           - 13616Opmerkingen:Zie ISO - 13616 voor de opbouw van dit gegevenselement.</td>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
                            </td>
@@ -129,7 +137,7 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Bankrekening_Rekeningtype">Rekeningtype</a>
                            </td>
-                        <td></td>
+                        <td>Rekeningtype (Bank, Spaar, Deposito, etc.)</td>
                         <td>
                            <a class="link" href="#detail_class_Vermogen_Rekeningtype">Rekeningtype</a>
                            </td>
@@ -139,7 +147,7 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Bankrekening_Tenaamstelling">Tenaamstelling</a>
                            </td>
-                        <td></td>
+                        <td>De naam van de houder(s) van de BANKREKENING.Bron: SGR</td>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
                            </td>
@@ -149,7 +157,8 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Bankrekening_Voorkeurbankrekening">Voorkeur bankrekening</a>
                            </td>
-                        <td></td>
+                        <td>Bankrekening die de voorkeur geniet van de burger ter gebruikmaking door de gemeente.Bron:
+                           GBI-Werkgroep Ontologie Inkomen</td>
                         <td>
                            <a class="link" href="#detail_class_Vermogen_StdIndJN">Std­Ind­JN</a>
                            </td>
@@ -206,11 +215,11 @@
                      </tr>
                      <tr>
                         <th>Herkomst definitie</th>
-                        <td> </td>
+                        <td>GBI - Werkgroep Ontologie</td>
                      </tr>
                      <tr>
                         <th>Datum opname</th>
-                        <td> </td>
+                        <td>8-2-2018</td>
                      </tr>
                      <tr>
                         <th>Unieke aanduiding</th>
@@ -261,7 +270,10 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Vermogenscomponent_Nogaantesprekenvermogen">Nog aan te spreken vermogen</a>
                            </td>
-                        <td></td>
+                        <td>Bij personen niet opnieuw in de bijstand komen, kan het zijn dat zij in de vorige
+                           bijstandsperiode al een deel van hun vermogen hebben moeten opeten.Per vermogenscomponent
+                           moet de bedrijfsservice Vaststelling vermogen in staat zijn het resterende bedrag
+                           pe vermogenscomponent te bepalen.</td>
                         <td>
                            <a class="link" href="#global_class_Vermogen_Geldbedrag">Geldbedrag</a>
                            </td>
@@ -281,7 +293,9 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Vermogenscomponent_Vrijtelatenvermogen">Vrij te laten vermogen</a>
                            </td>
-                        <td></td>
+                        <td>Het voor dit type vermogenscomponent wettelijk vrij te laten deel. Dit kan per type
+                           vermogen anders liggen. Er is wel vrijstelling op huis, maar niet op goud. Bij een
+                           huis is het wettelijke vrij te laten vermogen anders dan bij een auto.</td>
                         <td>
                            <a class="link" href="#global_class_Vermogen_Geldbedrag">Geldbedrag</a>
                            </td>
@@ -342,11 +356,11 @@
                      </tr>
                      <tr>
                         <th>Herkomst definitie</th>
-                        <td> </td>
+                        <td>GBI - Werkgroep Ontologie</td>
                      </tr>
                      <tr>
                         <th>Datum opname</th>
-                        <td> </td>
+                        <td>10-3-2021</td>
                      </tr>
                      <tr>
                         <th>Unieke aanduiding</th>
@@ -417,7 +431,7 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Waardepeiling_Peilmoment">Peilmoment</a>
                            </td>
-                        <td></td>
+                        <td>Het moment waarop het saldobedrag op de bankrekening stond.Bron: GBI-team Ontologie</td>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
                            </td>
@@ -437,7 +451,7 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Waardepeiling_WaardepeilingId">Waardepeiling­Id</a>
                            </td>
-                        <td></td>
+                        <td>Identificerend gegeven</td>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
                            </td>
@@ -447,7 +461,7 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Waardepeiling_WaardeSoortvermogenscomponent">Waarde­Soort vermogenscomponent</a>
                            </td>
-                        <td></td>
+                        <td>De soort waarde waarover de waardepeiling gaat, Zie de enumeratie.</td>
                         <td>
                            <a class="link" href="#detail_class_Vermogen_CdSrtWaardeVermogenscomponent">Cd­Srt­Waarde­Vermogenscomponent</a>
                            </td>
@@ -508,11 +522,11 @@
                      </tr>
                      <tr>
                         <th>Herkomst definitie</th>
-                        <td> </td>
+                        <td>GBI - Werkgroep Ontologie</td>
                      </tr>
                      <tr>
                         <th>Datum opname</th>
-                        <td> </td>
+                        <td>23-12-2020</td>
                      </tr>
                      <tr>
                         <th>Unieke aanduiding</th>
@@ -610,11 +624,11 @@
                      </tr>
                      <tr>
                         <th>Herkomst definitie</th>
-                        <td> </td>
+                        <td>GBI - Werkgroep Ontologie</td>
                      </tr>
                      <tr>
                         <th>Datum opname</th>
-                        <td> </td>
+                        <td>10-3-2023</td>
                      </tr>
                      <tr>
                         <th>Unieke aanduiding</th>
@@ -645,7 +659,11 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Onroerendgoed_Overwaarde">Overwaarde</a>
                            </td>
-                        <td></td>
+                        <td>Het verschil tussen de laatste waardepeiling van de gemeente, d.i. de WOZ-waarde,
+                           en de hoogte van de hypotheek.De onroerende zaak en de hypotheek zijn beide typen
+                           van een vermogenscomponent.De WOZ-waarde en de hoogte van de hypotheek zijn beide
+                           waardepeilingen bij die typen vermogenscomponent.Zij zijn onderling te relateren omdat
+                           beide typen vermogenscomponent een relatie hebben naar adres.</td>
                         <td>
                            <a class="link" href="#global_class_Vermogen_Geldbedrag">Geldbedrag</a>
                            </td>
@@ -716,11 +734,11 @@
                      </tr>
                      <tr>
                         <th>Herkomst definitie</th>
-                        <td> </td>
+                        <td>GBI - Werkgroep Ontologie</td>
                      </tr>
                      <tr>
                         <th>Datum opname</th>
-                        <td> </td>
+                        <td>10-3-2023</td>
                      </tr>
                      <tr>
                         <th>Unieke aanduiding</th>
@@ -751,7 +769,11 @@
                         <td>
                            <a class="link" href="#detail_attribute_Vermogen_Hypotheek_Overwaarde">Overwaarde</a>
                            </td>
-                        <td></td>
+                        <td>Het verschil tussen de laatste waardepeiling van de gemeente, d.i. de WOZ-waarde,
+                           en de hoogte van de hypotheek.De onroerende zaak en de hypotheek zijn beide typen
+                           van een vermogenscomponent.De WOZ-waarde en de hoogte van de hypotheek zijn beide
+                           waardepeilingen bij die typen vermogenscomponent.Zij zijn onderling te relateren omdat
+                           beide typen vermogenscomponent een relatie hebben naar adres.</td>
                         <td>
                            <a class="link" href="#global_class_Vermogen_Geldbedrag">Geldbedrag</a>
                            </td>
