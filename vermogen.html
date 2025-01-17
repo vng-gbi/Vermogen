@@ -1,7 +1,6 @@
-        <h2>Gegevensdefinitie</h2>
-         <p><b>Deze tekst is normatief.</b>
-            <!--SIM-InkomenModellen-1.0-1-20230101-20241108-125756 imvertor 4.0.0--></p>
-         <div class="imageinfo overview"><img src="Images/EAID_41A2613C_BF68_4c91_B5E7_EEB0444B9DE8.png" usemap="#imagemap-EAID_41A2613C_BF68_4c91_B5E7_EEB0444B9DE8" alt="Diagram: Vermogen- overzicht"><map name="imagemap-EAID_41A2613C_BF68_4c91_B5E7_EEB0444B9DE8"><area shape="rect" alt="Waardepeiling" coords="346,68,583,260" href="#global_class_Vermogen_Waardepeiling"><area shape="rect" alt="Vermogenscomponent" coords="347,315,583,453" href="#global_class_Vermogen_Vermogenscomponent"><area shape="rect" alt="Onroerend goed" coords="513,554,636,650" href="#global_class_Vermogen_Onroerendgoed"><area shape="rect" alt="Hypotheek" coords="404,746,527,841" href="#global_class_Vermogen_Hypotheek"><area shape="rect" alt="Bankrekening" coords="48,498,227,707" href="#global_class_Vermogen_Bankrekening"><area shape="rect" alt="Motorvoertuig" coords="294,554,417,650" href="#global_class_Vermogen_Motorvoertuig"></map><p><b>Vermogen- overzicht</b>
+         <h2>Gegevensdefinitie</h2>
+            <!--SIM-InkomenModellen-1.0-1-20230101-20250117-135929 imvertor 4.0.0--></p>
+         <div class="imageinfo overview"><img src="Images/EAID_B217F942_4C28_41b1_94E5_C0DE6A42396B.png" usemap="#imagemap-EAID_B217F942_4C28_41b1_94E5_C0DE6A42396B" alt="Diagram: Vermogen- overzicht"><map name="imagemap-EAID_B217F942_4C28_41b1_94E5_C0DE6A42396B"><area shape="rect" alt="Bank" coords="628,854,764,963" href="#global_class_Vermogen_Bank"><area shape="rect" alt="Persoon" coords="789,854,925,963" href="#global_class_Vermogen_Persoon"><area shape="rect" alt="Profiel" coords="48,128,184,237" href="#global_class_Vermogen_Profiel"><area shape="rect" alt="Waardepeiling" coords="905,63,1343,291" href="#global_class_Vermogen_Waardepeiling"><area shape="rect" alt="Vermogenscomponent" coords="385,96,764,270" href="#global_class_Vermogen_Vermogenscomponent"><area shape="rect" alt="Onroerend goed" coords="302,363,476,484" href="#global_class_Vermogen_Onroerendgoed"><area shape="rect" alt="Hypotheek" coords="302,588,476,697" href="#global_class_Vermogen_Hypotheek"><area shape="rect" alt="Bankrekening" coords="641,484,890,730" href="#global_class_Vermogen_Bankrekening"><area shape="rect" alt="Motorvoertuig" coords="641,307,869,428" href="#global_class_Vermogen_Motorvoertuig"></map><p><b>Vermogen- overzicht</b>
                
                <p></p>
                </p>
@@ -181,6 +180,34 @@
                      <tr>
                         <td>
                            Bankrekening
+                           [ 0 .. * ]
+                           
+                           <a class="link" href="#detail_association_Vermogen_Bankrekening_Levert">Levert</a>
+                           
+                           
+                           <a class="link" href="#global_class_Vermogen_Bank">Bank</a>
+                           
+                           [ 1 ]
+                           </td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           Bankrekening
+                           [ 0 .. * ]
+                           
+                           <a class="link" href="#detail_association_Vermogen_Bankrekening_Bezit">Bezit</a>
+                           
+                           
+                           <a class="link" href="#global_class_Vermogen_Persoon">Persoon</a>
+                           
+                           [ 1 .. 2 ]
+                           </td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           Bankrekening
                            is specialisatie van
                            
                            <a class="link" href="#global_class_Vermogen_Vermogenscomponent">Vermogenscomponent</a>
@@ -318,12 +345,26 @@
                      <tr>
                         <td>
                            Vermogenscomponent
-                           [ 0 .. * ]
+                           [ 1 ]
                            
                            <a class="link" href="#detail_association_Vermogen_Vermogenscomponent_VermogenscomponentisgewaardeerdmetWaardepeiling">Vermogenscomponent is gewaardeerd met Waardepeiling</a>
                            
                            
                            <a class="link" href="#global_class_Vermogen_Waardepeiling">Waardepeiling</a>
+                           
+                           [ 0 .. * ]
+                           </td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           Vermogenscomponent
+                           [ 0 .. * ]
+                           
+                           <a class="link" href="#detail_association_Vermogen_Vermogenscomponent_Bevat">Bevat</a>
+                           
+                           
+                           <a class="link" href="#global_class_Vermogen_Profiel">Profiel</a>
                            
                            [ 1 ]
                            </td>
@@ -486,12 +527,12 @@
                            
                            <a class="link" href="#global_class_Vermogen_Vermogenscomponent">Vermogenscomponent</a>
                            
-                           [ 0 .. * ]
+                           [ 1 ]
                            
                            <a class="link" href="#detail_association_Vermogen_Vermogenscomponent_VermogenscomponentisgewaardeerdmetWaardepeiling">Vermogenscomponent is gewaardeerd met Waardepeiling</a>
                            
                            Waardepeiling
-                           [ 1 ]
+                           [ 0 .. * ]
                            </td>
                         <td></td>
                      </tr>
@@ -603,6 +644,210 @@
                
                </section>
             
+            <section id="global_class_Vermogen_Bank">
+               <h4>   Bank</h4>
+               
+               <table style="width: 100%;">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>Bank</td>
+                     </tr>
+                     <tr>
+                        <th>Herkomst</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Definitie</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Herkomst definitie</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Datum opname</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Unieke aanduiding</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie abstract object</th>
+                        <td>Nee</td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               <h5>Overzicht relaties  </h5>
+               
+               <table style="width: 100%;">
+                  <colgroup style="width: 50%;"></colgroup>
+                  <colgroup style="width: 50%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Relatienaam met kardinaliteiten</th>
+                        <th>Definitie</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           
+                           <a class="link" href="#global_class_Vermogen_Bankrekening">Bankrekening</a>
+                           
+                           [ 0 .. * ]
+                           
+                           <a class="link" href="#detail_association_Vermogen_Bankrekening_Levert">Levert</a>
+                           
+                           Bank
+                           [ 1 ]
+                           </td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               
+               </section>
+            
+            <section id="global_class_Vermogen_Profiel">
+               <h4>   Profiel</h4>
+               
+               <table style="width: 100%;">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>Profiel</td>
+                     </tr>
+                     <tr>
+                        <th>Herkomst</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Definitie</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Herkomst definitie</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Datum opname</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Unieke aanduiding</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie abstract object</th>
+                        <td>Nee</td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               <h5>Overzicht relaties  </h5>
+               
+               <table style="width: 100%;">
+                  <colgroup style="width: 50%;"></colgroup>
+                  <colgroup style="width: 50%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Relatienaam met kardinaliteiten</th>
+                        <th>Definitie</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           
+                           <a class="link" href="#global_class_Vermogen_Vermogenscomponent">Vermogenscomponent</a>
+                           
+                           [ 0 .. * ]
+                           
+                           <a class="link" href="#detail_association_Vermogen_Vermogenscomponent_Bevat">Bevat</a>
+                           
+                           Profiel
+                           [ 1 ]
+                           </td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               
+               </section>
+            
+            <section id="global_class_Vermogen_Persoon">
+               <h4>   Persoon</h4>
+               
+               <table style="width: 100%;">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>Persoon</td>
+                     </tr>
+                     <tr>
+                        <th>Herkomst</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Definitie</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Herkomst definitie</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Datum opname</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Unieke aanduiding</th>
+                        <td> </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie abstract object</th>
+                        <td>Nee</td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               <h5>Overzicht relaties  </h5>
+               
+               <table style="width: 100%;">
+                  <colgroup style="width: 50%;"></colgroup>
+                  <colgroup style="width: 50%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Relatienaam met kardinaliteiten</th>
+                        <th>Definitie</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           
+                           <a class="link" href="#global_class_Vermogen_Bankrekening">Bankrekening</a>
+                           
+                           [ 0 .. * ]
+                           
+                           <a class="link" href="#detail_association_Vermogen_Bankrekening_Bezit">Bezit</a>
+                           
+                           Persoon
+                           [ 1 .. 2 ]
+                           </td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               
+               </section>
+            
             <section id="global_class_Vermogen_Onroerendgoed">
                <h4>   Onroerend goed</h4>
                
@@ -688,12 +933,12 @@
                            
                            <a class="link" href="#global_class_Vermogen_Hypotheek">Hypotheek</a>
                            
-                           [ 1 ]
+                           [ 0 .. * ]
                            
                            <a class="link" href="#detail_association_Vermogen_Hypotheek_HypotheekrustopOnroerendgoed">Hypotheek rust op Onroerend goed</a>
                            
                            Onroerend goed
-                           [ 0 .. * ]
+                           [ 1 ]
                            </td>
                         <td></td>
                      </tr>
@@ -796,14 +1041,14 @@
                      <tr>
                         <td>
                            Hypotheek
-                           [ 1 ]
+                           [ 0 .. * ]
                            
                            <a class="link" href="#detail_association_Vermogen_Hypotheek_HypotheekrustopOnroerendgoed">Hypotheek rust op Onroerend goed</a>
                            
                            
                            <a class="link" href="#global_class_Vermogen_Onroerendgoed">Onroerend goed</a>
                            
-                           [ 0 .. * ]
+                           [ 1 ]
                            </td>
                         <td></td>
                      </tr>
@@ -1559,6 +1804,130 @@
                         </tbody>
                      </table>
                      </section>
+                  
+                  <section id="detail_association_Vermogen_Bankrekening_Levert">
+                     <h6>Relatiesoort details  <a href="#global_class_Vermogen_Bankrekening">Bankrekening</a> Levert</h6>
+                     
+                     <table style="width: 100%;">
+                        <colgroup style="width: 30%;"></colgroup>
+                        <colgroup style="width: 70%;"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Naam</th>
+                              <td>Levert</td>
+                           </tr>
+                           <tr>
+                              <th>Gerelateerd objecttype</th>
+                              <td>
+                                 <a class="link" href="#global_class_Vermogen_Bank">Bank</a>
+                                 </td>
+                           </tr>
+                           <tr>
+                              <th>Herkomst</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Definitie</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Herkomst definitie</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Datum opname</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Mogelijk geen waarde</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie in onderzoek</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Aanduiding strijdigheid/nietigheid</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie kardinaliteit</th>
+                              <td>1</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie authentiek</th>
+                              <td>Authentiek</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td> </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     
+                     </section>
+                  
+                  <section id="detail_association_Vermogen_Bankrekening_Bezit">
+                     <h6>Relatiesoort details  <a href="#global_class_Vermogen_Bankrekening">Bankrekening</a> Bezit</h6>
+                     
+                     <table style="width: 100%;">
+                        <colgroup style="width: 30%;"></colgroup>
+                        <colgroup style="width: 70%;"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Naam</th>
+                              <td>Bezit</td>
+                           </tr>
+                           <tr>
+                              <th>Gerelateerd objecttype</th>
+                              <td>
+                                 <a class="link" href="#global_class_Vermogen_Persoon">Persoon</a>
+                                 </td>
+                           </tr>
+                           <tr>
+                              <th>Herkomst</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Definitie</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Herkomst definitie</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Datum opname</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Mogelijk geen waarde</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie in onderzoek</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Aanduiding strijdigheid/nietigheid</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie kardinaliteit</th>
+                              <td>1 .. 2</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie authentiek</th>
+                              <td>Authentiek</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td> </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     
+                     </section>
                   </section>
                
                <section id="detail_class_Vermogen_Vermogenscomponent">
@@ -1904,6 +2273,68 @@
                               <th>Gerelateerd objecttype</th>
                               <td>
                                  <a class="link" href="#global_class_Vermogen_Waardepeiling">Waardepeiling</a>
+                                 </td>
+                           </tr>
+                           <tr>
+                              <th>Herkomst</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Definitie</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Herkomst definitie</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Datum opname</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Mogelijk geen waarde</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie in onderzoek</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Aanduiding strijdigheid/nietigheid</th>
+                              <td> </td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie kardinaliteit</th>
+                              <td>0 .. *</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie authentiek</th>
+                              <td>Authentiek</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td> </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     
+                     </section>
+                  
+                  <section id="detail_association_Vermogen_Vermogenscomponent_Bevat">
+                     <h6>Relatiesoort details  <a href="#global_class_Vermogen_Vermogenscomponent">Vermogenscomponent</a> Bevat</h6>
+                     
+                     <table style="width: 100%;">
+                        <colgroup style="width: 30%;"></colgroup>
+                        <colgroup style="width: 70%;"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Naam</th>
+                              <td>Bevat</td>
+                           </tr>
+                           <tr>
+                              <th>Gerelateerd objecttype</th>
+                              <td>
+                                 <a class="link" href="#global_class_Vermogen_Profiel">Profiel</a>
                                  </td>
                            </tr>
                            <tr>
@@ -2610,6 +3041,9 @@
                      </section>
                   </section>
                
+               
+               
+               
                <section id="detail_class_Vermogen_Onroerendgoed">
                   <h5>   Onroerend goed</h5>
                   
@@ -2794,7 +3228,7 @@
                            </tr>
                            <tr>
                               <th>Indicatie kardinaliteit</th>
-                              <td>0 .. *</td>
+                              <td>1</td>
                            </tr>
                            <tr>
                               <th>Indicatie authentiek</th>
